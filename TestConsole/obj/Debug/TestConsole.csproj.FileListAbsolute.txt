@@ -1,0 +1,6 @@
+E:\WorkSpace\学习\WebUploadService\TestConsole\bin\Debug\TestConsole.exe
+E:\WorkSpace\学习\WebUploadService\TestConsole\bin\Debug\TestConsole.pdb
+E:\WorkSpace\学习\WebUploadService\TestConsole\obj\Debug\TestConsole.exe
+E:\WorkSpace\学习\WebUploadService\TestConsole\obj\Debug\TestConsole.pdb
+E:\WorkSpace\学习\WebUploadService\TestConsole\bin\Debug\TestConsole.exe.config
+E:\WorkSpace\学习\WebUploadService\TestConsole\bin\Debug\Newtonsoft.Json.dll

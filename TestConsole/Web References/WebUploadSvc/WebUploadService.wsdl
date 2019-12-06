@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UploadByBase64Str">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="base64Str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadByBase64StrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadByBase64StrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadByByteArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadByByteArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadByByteArrayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadByUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadByUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadByUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetResponseContentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseContentType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetResponseContentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetResponseContentTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BeginSegmentUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contentSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BeginSegmentUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BeginSegmentUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegmentUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="segmentContent" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="sortNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegmentUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SegmentUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegmentUploadByBase64Str">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="base64Str" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sortNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegmentUploadByBase64StrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SegmentUploadByBase64StrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndSegmentUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndSegmentUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EndSegmentUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadByBase64StrSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadByBase64Str" />
+  </wsdl:message>
+  <wsdl:message name="UploadByBase64StrSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadByBase64StrResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadByByteArraySoapIn">
+    <wsdl:part name="parameters" element="tns:UploadByByteArray" />
+  </wsdl:message>
+  <wsdl:message name="UploadByByteArraySoapOut">
+    <wsdl:part name="parameters" element="tns:UploadByByteArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadByUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadByUrl" />
+  </wsdl:message>
+  <wsdl:message name="UploadByUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadByUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetResponseContentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetResponseContentType" />
+  </wsdl:message>
+  <wsdl:message name="SetResponseContentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetResponseContentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="BeginSegmentUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:BeginSegmentUpload" />
+  </wsdl:message>
+  <wsdl:message name="BeginSegmentUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:BeginSegmentUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="SegmentUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:SegmentUpload" />
+  </wsdl:message>
+  <wsdl:message name="SegmentUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:SegmentUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="SegmentUploadByBase64StrSoapIn">
+    <wsdl:part name="parameters" element="tns:SegmentUploadByBase64Str" />
+  </wsdl:message>
+  <wsdl:message name="SegmentUploadByBase64StrSoapOut">
+    <wsdl:part name="parameters" element="tns:SegmentUploadByBase64StrResponse" />
+  </wsdl:message>
+  <wsdl:message name="EndSegmentUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:EndSegmentUpload" />
+  </wsdl:message>
+  <wsdl:message name="EndSegmentUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:EndSegmentUploadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebUploadServiceSoap">
+    <wsdl:operation name="UploadByBase64Str">
+      <wsdl:input message="tns:UploadByBase64StrSoapIn" />
+      <wsdl:output message="tns:UploadByBase64StrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadByByteArray">
+      <wsdl:input message="tns:UploadByByteArraySoapIn" />
+      <wsdl:output message="tns:UploadByByteArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadByUrl">
+      <wsdl:input message="tns:UploadByUrlSoapIn" />
+      <wsdl:output message="tns:UploadByUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetResponseContentType">
+      <wsdl:input message="tns:SetResponseContentTypeSoapIn" />
+      <wsdl:output message="tns:SetResponseContentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginSegmentUpload">
+      <wsdl:input message="tns:BeginSegmentUploadSoapIn" />
+      <wsdl:output message="tns:BeginSegmentUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SegmentUpload">
+      <wsdl:input message="tns:SegmentUploadSoapIn" />
+      <wsdl:output message="tns:SegmentUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SegmentUploadByBase64Str">
+      <wsdl:input message="tns:SegmentUploadByBase64StrSoapIn" />
+      <wsdl:output message="tns:SegmentUploadByBase64StrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndSegmentUpload">
+      <wsdl:input message="tns:EndSegmentUploadSoapIn" />
+      <wsdl:output message="tns:EndSegmentUploadSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebUploadServiceSoap" type="tns:WebUploadServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadByBase64Str">
+      <soap:operation soapAction="http://tempuri.org/UploadByBase64Str" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadByByteArray">
+      <soap:operation soapAction="http://tempuri.org/UploadByByteArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadByUrl">
+      <soap:operation soapAction="http://tempuri.org/UploadByUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetResponseContentType">
+      <soap:operation soapAction="http://tempuri.org/SetResponseContentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginSegmentUpload">
+      <soap:operation soapAction="http://tempuri.org/BeginSegmentUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegmentUpload">
+      <soap:operation soapAction="http://tempuri.org/SegmentUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegmentUploadByBase64Str">
+      <soap:operation soapAction="http://tempuri.org/SegmentUploadByBase64Str" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndSegmentUpload">
+      <soap:operation soapAction="http://tempuri.org/EndSegmentUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebUploadServiceSoap12" type="tns:WebUploadServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadByBase64Str">
+      <soap12:operation soapAction="http://tempuri.org/UploadByBase64Str" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadByByteArray">
+      <soap12:operation soapAction="http://tempuri.org/UploadByByteArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadByUrl">
+      <soap12:operation soapAction="http://tempuri.org/UploadByUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetResponseContentType">
+      <soap12:operation soapAction="http://tempuri.org/SetResponseContentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginSegmentUpload">
+      <soap12:operation soapAction="http://tempuri.org/BeginSegmentUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegmentUpload">
+      <soap12:operation soapAction="http://tempuri.org/SegmentUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegmentUploadByBase64Str">
+      <soap12:operation soapAction="http://tempuri.org/SegmentUploadByBase64Str" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndSegmentUpload">
+      <soap12:operation soapAction="http://tempuri.org/EndSegmentUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebUploadService">
+    <wsdl:port name="WebUploadServiceSoap" binding="tns:WebUploadServiceSoap">
+      <soap:address location="http://localhost:33030/Service/WebUploadService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebUploadServiceSoap12" binding="tns:WebUploadServiceSoap12">
+      <soap12:address location="http://localhost:33030/Service/WebUploadService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

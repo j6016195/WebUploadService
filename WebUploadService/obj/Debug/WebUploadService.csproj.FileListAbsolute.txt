@@ -1,0 +1,6 @@
+E:\WorkSpace\学习\WebUploadService\WebUploadService\bin\WebUploadService.dll
+E:\WorkSpace\学习\WebUploadService\WebUploadService\bin\WebUploadService.pdb
+E:\WorkSpace\学习\WebUploadService\WebUploadService\bin\Newtonsoft.Json.dll
+E:\WorkSpace\学习\WebUploadService\WebUploadService\obj\Debug\WebUploadService.dll
+E:\WorkSpace\学习\WebUploadService\WebUploadService\obj\Debug\WebUploadService.pdb
+E:\WorkSpace\学习\WebUploadService\WebUploadService\obj\Debug\WebUploadService.csprojResolveAssemblyReference.cache

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUploadService", "WebUploadService\WebUploadService.csproj", "{FB27B5E0-E7C5-406C-AAEA-FA022A555D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{7DD9777F-340D-47AA-9B1B-1C05725DCE0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB27B5E0-E7C5-406C-AAEA-FA022A555D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB27B5E0-E7C5-406C-AAEA-FA022A555D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB27B5E0-E7C5-406C-AAEA-FA022A555D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB27B5E0-E7C5-406C-AAEA-FA022A555D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD9777F-340D-47AA-9B1B-1C05725DCE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD9777F-340D-47AA-9B1B-1C05725DCE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD9777F-340D-47AA-9B1B-1C05725DCE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD9777F-340D-47AA-9B1B-1C05725DCE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
